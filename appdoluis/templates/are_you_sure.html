@@ -1,0 +1,7 @@
+Você tem certeza que deseja deletar o jogo {{ J_recomendado.Title}}
+
+<form method = "post">
+  {% csrf_token %}
+  <input type ="submit" name = "confirm" value="Sim">
+  <input type ="submit" name = "" value="Nao">
+</form>

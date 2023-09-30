@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Minha primeira página</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+
+<body>
+  <h1 class ="blue-center">Marcelo Pessoa Martins</h1>
+  
+  <div class="blue-center">
+    <h2>🎮 Meus jogos favoritos 🎮</h2>
+    <p class="limit-text">
+    <b>Olá, nessa página eu vou escrever sobre os meus jogos <span style="color: Red;">F</span><span style="color: Orange;">A</span><span style="color: Violet;">V</span><span style="color: Orange;">O</span><span style="color: Green;">R</span><span style="color: Indigo;">I</span><span style="color: Blue;">T</span><span style="color: Orange;">O</span><span style="color: Pink;">S</span>, mostrando um pouco sobre cada um deles, recomendar outros jogos que, embora não sejam os meus favoritos, ainda são muito bons e uma Tabela com o tempo que eu gastei em cada um deles.</b>
+    </p>
+  </div>
+  <div class="blue-center">
+    <p class="limit-text">
+      Os jogos abaixo são os TOP 5 que eu ativamente jogo por serem quase impossíveis de não amar:
+    </p>
+      <!--<b><ol>
+        <li>Minecraft</li>
+        <li>League of legends</li>
+        <li>Squad</li>
+        <li>Sid Meier’s Civilization VI</li>
+        <li>Factorio</li>
+      </ol></b>-->
+      <b><ol>
+        {% for j_favorito in JogosFavoritos%}
+        <li>{{ j_favorito.Title }}</li>
+        {% endfor %}
+      </ol></b>
+    <p class="limit-text">
+      Agora vou explicar cada um deles, escrevendo uma breve descrição do jogo, seus temas e disponibilizando o link de sua wiki
+    </p>
+  </div>
+  
+  <div class="blue-center">
+    <h2><b>1. MINECRAFT</b></h2>
+      <div><img src="https://assets.xboxservices.com/assets/fb/8f/fb8f4675-955f-4930-aab4-3292ec16289e.jpg?n=Minecraft_Feature-Center-1084_XGP-Shotlock_1600x600.jpg" width="600">   
+      </div>
+    <div class="limit-text">
+      <p>
+      <b>Minecraft</b> é um jogo de construção em mundo aberto desenvolvido pela <i>Mojang Studios</i> onde jogadores interagem com um ambiente 3D totalmente modificável feito de blocos e entidades. Sua diversificada jogabilidade permite que os jogadores escolham a forma como jogam, permitindo inúmeras possibilidades.
+      </p>
+      <p>
+      <b>Temas:</b> Sobrevivência, Sandbox, Aventura, Multiplayer, Construção, Exploração
+      </p>
+      <p>
+      <b>WIKI do jogo:</b> <a href="https://minecraft.fandom.com/pt/wiki/Minecraft_Wiki" target="_blank""> LINK DA WIKI</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="blue-center">
+    <h2><b>2. LEAGUE OF LEGENDS</b></h2>
+      <div><img src="https://s2-ge.glbimg.com/FKUe6SrgjSlshS7Jk25FNsk2AZg=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2021/6/Q/Fq6AMUTJKxZA7SVgIJBA/league-of-legends.jpg" width="600">   
+      </div>
+    <div class="limit-text">
+      <p>
+      <b>League of Legends</b> é um jogo eletrônico do gênero <i>multiplayer online battle arena</i> (MOBA) desenvolvido e publicado pela <i>Riot Games</i>. No jogo, duas equipes de cinco jogadores batalham em um combate <i>Player versus Player</i> (PvP), com cada equipe ocupando e defendendo sua metade do mapa. Cada um dos dez jogadores controla um personagem, conhecido como campeão, com habilidades únicas e diferentes estilos de jogo sendo o objetivo primário avançar até a base inimiga e destruir uma grande estrutura localizada em seu centro, sob o nome de Nexus.
+      </p>
+      <p>
+      <b>Temas:</b> Fantasia épica, PvP, Habilidades únicas, Estratégia em equipe, narrativa rica
+      </p>
+      <p>
+      <b>WIKI do jogo:</b> <a href="https://leagueoflegends.fandom.com/wiki/League_of_Legends" target="_blank""> LINK DA WIKI</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="blue-center">
+    <h2><b>3. SQUAD</b></h2>
+      <div><img src="https://cdn.cloudflare.steamstatic.com/steam/apps/393380/capsule_616x353.jpg?t=1687971112" width="600">   
+      </div>
+    <div class="limit-text">
+      <p>
+      <b>Squad</b> é um FPS tático que oferece experiências autênticas de combate por meio do trabalho em equipe, comunicação constante e jogabilidade realista. Ele preenche a lacuna entre jogos de tiro arcade e simulações militares com batalhas de até 100 jogadores, combates de armas combinadas, construção de bases e um sistema integrado de VoIP..
+      </p>
+      <p>
+      <b>Temas:</b> Simulação militar, Cooperação em equipe, Estratégia tática, Combates realistas, Comunicação coordenada, Veículos de guerra, Ambientes de batalha detalhados
+      </p>
+      <p>
+      <b>WIKI do jogo:</b> <a href="https://squad.fandom.com/wiki/Squad_Wiki" target="_blank""> LINK DA WIKI</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="blue-center">
+    <h2><b>4. SID MEIER’S CIVILIZATION VI</b></h2>
+      <div><img src="https://cdn1.epicgames.com/cd14dcaa4f3443f19f7169a980559c62/offer/EGS_SidMeiersCivilizationVI_FiraxisGames_S1-2560x1440-2fcd1c150ac6d8cdc672ae042d2dd179.jpg" width="600">   
+      </div>
+    <div class="limit-text">
+      <p>
+      <b>Civilization VI</b> é um jogo de estratégia que oferece uma experiência enriquecedora ao permitir que os jogadores construam e expandam suas próprias civilizações ao longo da história com elementos de construção de impérios, diplomacia, pesquisa científica e exploração, o jogo proporciona uma imersão profunda na evolução da humanidade. Os jogadores podem competir ou colaborar com outras civilizações, tomar decisões cruciais e moldar o destino de sua nação. Com mecânicas complexas e uma abordagem realista, <b>Civilization VI</b> equilibra a profundidade histórica com a jogabilidade estratégica, proporcionando uma experiência de construção de civilizações única e envolvente.
+      </p>
+      <p>
+      <b>Temas:</b> Construção de civilizações, Exploração de territórios, Diplomacia internacional, Guerra e conflitos históricos, Avanço tecnológico, Desenvolvimento cultural, Gestão de recursos, expansão de cidades
+      </p>
+      <p>
+      <b>WIKI do jogo:</b> <a href="https://civilization.fandom.com/wiki/Civilization_VI" target="_blank""> LINK DA WIKI</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="blue-center">
+    <h2><b>5. FACTORIO</b></h2>
+      <div><img src="https://www.adrenaline.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=910&height=568&format=webp&quality=91&imagick=/wp-content/uploads/2023/01/Factorio_vai_aumentar_de_preco_Steam.jpg" width="600">   
+      </div>
+    <div class="limit-text">
+      <p>
+      <b>Factorio</b> é um jogo de simulação que coloca os jogadores no controle da criação e otimização de complexas fábricas automatizadas. Com um foco central na automação, os jogadores exploram, coletam recursos, projetam linhas de produção e constroem sistemas intricados para atender às demandas crescentes onde o jogo combina elementos de gerenciamento de recursos, planejamento logístico e resolução de quebra-cabeças, à medida que os jogadores enfrentam desafios para melhorar a eficiência de suas fábricas. Com uma abordagem altamente customizável e a possibilidade de experimentação, <b>Factorio</b> oferece uma experiência única de resolução de problemas e criação, enquanto os jogadores buscam construir uma máquina perfeitamente harmoniosa.
+      </p>
+      <p>
+      <b>Temas:</b> Cadeias de produção, Mineração e extração de recursos, Otimização de fábricas, Gerenciamento de logística, Engenharia de sistemas, Tecnologia avançada, Expansão
+      </p>
+      <p>
+      <b>WIKI do jogo:</b> <a href="https://wiki.factorio.com/" target="_blank""> LINK DA WIKI</a>
+      </p>
+    </div>
+  </div>
+  
+  <div class="blue-center">
+    <h2><b>
+MENÇÃO HONROSA - ESCAPE FROM TARKOV</b></h2>
+      <div><img src="https://supplychaingamechanger.com/wp-content/uploads/2023/01/Escape-from-Tarkov-header-1200x675.webp" width="600">   
+      </div>
+    <div class="limit-text">
+      <p>
+      <b>Escape from Tarkov</b> é um FPS de sobrevivência que mergulha os jogadores em um ambiente implacável e realista, repleto de perigos e desafios, sendo ambientado em uma cidade devastada pela guerra, o jogo exige que os jogadores explorem, coletem recursos, enfrentem inimigos controlados por IA e jogadores rivais, enquanto lutam para escapar com seu saque. Com mecânicas de saque complexas, customização de armas e um sistema de saúde detalhado, o jogo enfatiza a tática, a estratégia e a tomada de decisões cuidadosas. A experiência imersiva é acentuada pela busca por equipamentos valiosos e a constante sensação de perigo iminente. <b>Escape from Tarkov</b> oferece uma mistura única de ação intensa e realismo, cativando os jogadores com um mundo hostil onde a sobrevivência é a principal meta.
+      </p>
+      <p>
+      <b>Temas:</b> Sobrevivência em ambiente hostil, Combate tático e realista, Cenários pós-apocalípticos, Exploração de ambientes urbanos e rurais, Gerenciamento de inventário e recursos, Aquisição e troca de equipamentos, Intensa competição por recursos escassos, Progressão de personagem baseada em habilidades
+      </p>
+      <p>
+      <b>WIKI do jogo:</b> <a href="https://escapefromtarkov.fandom.com/wiki/Escape_from_Tarkov_Wiki" target="_blank""> LINK DA WIKI</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="blue-center">
+    <h2>JOGOS EXTRAS</h2>
+      <div class="limit-text">
+        <p>
+        Aqui estarão os jogos que, embora não sejam meus favoritos e não jogo tanto devido a diversos fatores, ainda merecem serem mencionados por sua qualidade excepcional:
+        </p>
+        <!--<b><ul>
+          <li>Call of Duty: black ops II</li>
+          <li>Call of duty: black ops III</li>
+          <li>Phasmophobia</li>
+          <li>ACE COMBAT 7: SKIES UNKNOWN</li>
+          <li>ARAGAMI</li>
+          <li>ARAGAMI II</li>
+          <li>Battle Bit: Remastered</li>
+          <li>Bloons TD6</li>
+          <li>From the Depths</li>
+          <li>Grand Theft Auto V</li>
+          <li>Payday 2</li>
+          <li>Project Zomboid</li>
+          <li>Ready or Not</li>
+          <li>Cities: Skylines</li>
+          <li>Stardew Valley</li>
+          <li>Subnautica</li>
+          <li>Valheim</li>
+          <li>Sea of Thieves</li>
+          <li>Elden Ring</li>
+        </ul></b>-->
+        <b><ul>
+        {% for j_recomendado in JogosRecomendados%}
+        <li>{{ j_recomendado.Title }} 
+          <a href="/jogos/recomendados/update/{{ j_recomendado.id }}">Atualizar</a>
+          <a href="/jogos/recomendados/delete/{{ j_recomendado.id }}">Deletar</a>
+        </li>
+        {% endfor %}
+        </ul></b>
+        <a href ="/jogos/recomendados/create"> Quer adicionar um jogo? </a>
+      </div>
+  </div>
+
+  <div class="blue-center">
+    <h2>Horas...</h2>
+    <div class="limit-text">
+      <p>
+        Bem... Podemos dizer que eu gastei muitas horas na frente da tela jogando esses jogos, MAS O QUE EU POSSO FAZER ELES SÃO MUITO PERFEITOS, agora vamos para a tabela de quantas horas exatamente eu fiquei jogando eles (Os que não são da steam eu não tenho muito certeza das horas):
+      </p>
+      <table class="custom-table">
+        <tr>
+          <th>JOGO</th>
+          <th>HORAS</th>
+        </tr>
+        <tr>
+          <th>MINECRAFT</th>
+          <th>+5000 h</th>
+        </tr>
+        <tr>
+          <th>League of Legends</th>
+          <th>+-1000 h</th>
+        </tr>
+        <tr>
+          <th>SQUAD</th>
+          <th>382 h</th>
+        </tr>
+        <tr>
+          <th>Civilization IV</th>
+          <th>+-200 h</th>
+        </tr>
+        <tr>
+          <th>Factorio</th>
+          <th>+-300 h</th>
+        </tr>
+        <tr>
+          <th>Escape from Tarkov</th>
+          <th>+-300 h</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="blue-center">
+  <b><h1>OBRIGADO POR LER MINHA PÁGINA</h1></b>
+  <b><h2>^_^</h2></b>
+  </div>
+  
+</body>
+
+</html>

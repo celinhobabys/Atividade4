@@ -1,0 +1,23 @@
+<h1>{{ action }} um jogo</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Nome do jogo:</label>
+    <input name="Title" value="{{ J_recomendado.Title }}">
+  </div>
+    <div>
+    <label>Desenvolvedor:</label>
+    <input name="Dev" value="{{ J_recomendado.Dev }}">
+  </div>
+    <div>
+    <label>Pontos positivos:</label>
+    <input name="Likes" value="{{ J_recomendado.Likes }}">
+  </div>
+    <div>
+    <label>Pontos negativos:</label>
+    <input name="Dislikes" value="{{ J_recomendado.Dislikes }}">
+  </div>
+
+  <input type = "submit" value = "Registar" >
+</form>

@@ -1,0 +1,56 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-image: url(https://i.pinimg.com/originals/50/a9/9c/50a99c034cb5ee232fbe1bd5c5d5b5ef.jpg);
+  background-size: cover;
+  color: white;
+}
+
+p {
+  font-size: 22px;
+}
+
+li{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid white;
+}
+
+.custom-table th {
+  border: 2px solid white;
+  padding: 8px;
+  text-align: left;
+  background-color: #000000;
+}
+
+.custom-table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+body{
+  background-image: url(https://i.pinimg.com/originals/50/a9/9c/50a99c034cb5ee232fbe1bd5c5d5b5ef.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.blue-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.limit-text{
+  max-width: 600px;
+  word-wrap: break-word;
+  text-align: justify;
+}
+
