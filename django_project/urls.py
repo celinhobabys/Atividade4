@@ -18,7 +18,10 @@ from django.urls import path
 from appdoluis import views
 
 urlpatterns = [
-  path('',views.home, name="home"),
+  path('users', views.create_user),
+  path('users/login/', views.login_user, name="login"),
+  path('users/logout/', views.logout_user, name="logout"),
+  path('',views.home, name="home"),  
   path('jogos/recomendados/create', views.create_Jrecomendado),
   path('jogos/recomendados/update/<id>', views.update_Jrecomendado),
   path('jogos/recomendados/delete/<id>', views.delete_Jrecomendado),

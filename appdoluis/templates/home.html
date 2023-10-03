@@ -11,8 +11,11 @@
 
 <body>
   <h1 class ="blue-center">Marcelo Pessoa Martins</h1>
-  
   <div class="blue-center">
+    {%if request.user.is_authenticated%}
+    <b>Bem-vindo, {{request.user.username}}</b> <br>
+    <a href="/users/logout">Logout</a>
+    {% endif %}
     <h2>🎮 Meus jogos favoritos 🎮</h2>
     <p class="limit-text">
     <b>Olá, nessa página eu vou escrever sobre os meus jogos <span style="color: Red;">F</span><span style="color: Orange;">A</span><span style="color: Violet;">V</span><span style="color: Orange;">O</span><span style="color: Green;">R</span><span style="color: Indigo;">I</span><span style="color: Blue;">T</span><span style="color: Orange;">O</span><span style="color: Pink;">S</span>, mostrando um pouco sobre cada um deles, recomendar outros jogos que, embora não sejam os meus favoritos, ainda são muito bons e uma Tabela com o tempo que eu gastei em cada um deles.</b>
@@ -224,6 +227,7 @@ MENÇÃO HONROSA - ESCAPE FROM TARKOV</b></h2>
   <b><h1>OBRIGADO POR LER MINHA PÁGINA</h1></b>
   <b><h2>^_^</h2></b>
   </div>
+  
   
 </body>
 
